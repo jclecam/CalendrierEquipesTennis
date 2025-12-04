@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Calendrier Equipes TC Bourbriac</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Mobile</title>
+    <style>
+        /* --- Reset et Base --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5; /* Gris très clair pour le fond */
+            padding: 16px; /* Marge autour de l'écran */
+            color: #333;
+        }
+
+        /* --- Conteneur des blocs --- */
+        .container {
+            max-width: 600px; /* Limite la largeur sur PC, prend 100% sur mobile */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Espace entre les blocs */
+        }
+
+        /* --- Le Bloc Rectangle Arrondi (La Carte) --- */
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px; /* Arrondi des angles */
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Légère ombre pour le relief */
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #007bff; /* Petite touche de couleur décorative à gauche */
+        }
+
+        /* --- Styles des Lignes --- */
+        .line-date {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .line-period {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .line-team {
+            font-size: 1rem;
+            color: #007bff; /* Bleu pour l'équipe */
+            background-color: #e7f1ff; /* Fond bleu très pâle */
+            padding: 6px 12px;
+            border-radius: 20px; /* Forme de pilule */
+            align-self: flex-start; /* Ne prend que la largeur nécessaire */
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site !</h1>
-  <p>Ceci est une page web très simple.</p>
+
+    <div class="container">
+        
+        <div class="card">
+            <div class="line-date">04 Déc 2025</div>
+            <div class="line-period">Matin</div>
+            <div class="line-team">Equipe 01</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">05 Déc 2025</div>
+            <div class="line-period">Matin</div>
+            <div class="line-team">Equipe 01</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">06 Déc 2025</div>
+            <div class="line-period">Matin</div>
+            <div class="line-team">Equipe 02</div>
+        </div>
+
+    </div>
+
 </body>
 </html>
