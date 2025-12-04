@@ -37,7 +37,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Légère ombre pour le relief */
             display: flex;
             flex-direction: column;
-            border-left: 5px solid #007bff; /* Petite touche de couleur décorative à gauche */
+            border-left: 5px solid #EBF80A; /* Petite touche de couleur décorative à gauche */
         }
 
         /* --- Styles des Lignes --- */
@@ -51,13 +51,13 @@
         }
 
         .line-period {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: #222;
             margin-bottom: 8px;
         }
 
-        .line-team {
+        .line-teamh {
             font-size: 1rem;
             color: #007bff; /* Bleu pour l'équipe */
             background-color: #e7f1ff; /* Fond bleu très pâle */
@@ -67,9 +67,34 @@
             font-weight: 500;
         }
 		
+		.line-teamf {
+            font-size: 1rem;
+            color: #EA49DB; /* Rose pour l'équipe */
+            background-color: #FFDDFD; /* Fond rose très pâle */
+            padding: 6px 12px;
+            border-radius: 20px; /* Forme de pilule */
+            align-self: flex-start; /* Ne prend que la largeur nécessaire */
+            font-weight: 500;
+        }
+		
         .line-court {
             font-size: 1rem;
-            color: #871b0f; /* Bleu pour l'équipe */
+            color: #0EB525;
+            padding: 6px 12px;
+            align-self: flex-start; /* Ne prend que la largeur nécessaire */
+            font-weight: 500;            
+        }
+		
+		.line-infos {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ED1C24;
+            margin-bottom: 8px;           
+        }
+		
+		.line-vide {
+            font-size: 0.6rem;
+            color: #FFFFFF; 
             padding: 6px 12px;
             align-self: flex-start; /* Ne prend que la largeur nécessaire */
             font-weight: 500;            
@@ -81,26 +106,229 @@
     <div class="container">
         
         <div class="card">
-            <div class="line-date">Dimanche 14 Déc 2025</div>
-            <div class="line-period">Matin</div>
-            <div class="line-team">Equipe filles 13/14 ans</div>
+            <div class="line-date">Samedi 13 Déc 2025</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 14 Déc 2025</div>
+            <div class="line-period">Matin: 09h30</div>
+            <div class="line-teamf">Equipe filles 13/15 ans</div>
             <div class="line-court">Court N°1 et Gymnase</div>
+            <div class="line-period">Après-midi: 13h</div>
+            <div class="line-teamh">Equipe garçons 13/14 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 20 Déc 2025</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 21 Déc 2025</div>
+            <div class="line-period">Matin</div>
             <div class="line-period">Après-midi</div>
-            <div class="line-team">Equipe 01</div>
+        </div>
+  
+        <div class="card">
+            <div class="line-date">Samedi 27 Déc 2025</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 28 Déc 2025</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
         </div>
 
         <div class="card">
-            <div class="line-date">05 Déc 2025</div>
+            <div class="line-date">Samedi 03 Jan 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 04 Jan 2026</div>
             <div class="line-period">Matin</div>
-            <div class="line-team">Equipe 01</div>
+            <div class="line-period">Après-midi</div>
         </div>
 
         <div class="card">
-            <div class="line-date">06 Déc 2025</div>
+            <div class="line-date">Samedi 10 Jan 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 11 Jan 2026</div>
             <div class="line-period">Matin</div>
-            <div class="line-team">Equipe 02</div>
+            <div class="line-period">Après-midi</div>
         </div>
 
+        <div class="card">
+            <div class="line-date">Samedi 17 Jan 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 18 Jan 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		
+		<div class="card">
+            <div class="line-date">Samedi 24 Jan 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 25 Jan 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		
+		        <div class="card">
+            <div class="line-date">Samedi 31 Jan 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 01 Fev 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 07 Fev 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 08 Fev 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 14 Fev 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 15 Fev 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		
+		<div class="card">
+            <div class="line-date">Samedi 21 Fev 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 22 Jan 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 28 Fev 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 01 Mars 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 07 Mars 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 08 Mars 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 14 Mars 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 15 Mars 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		
+		<div class="card">
+            <div class="line-date">Samedi 21 Mars 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 22 Mars 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		        <div class="card">
+            <div class="line-date">Samedi 28 Mars 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 29 Mars 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+			<div class="line-infos">FIN CHAMPIONNAT HOMMES</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 04 Avril 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 05 Avril 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 11 Avril 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 12 Avril 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		
+		<div class="card">
+            <div class="line-date">Samedi 18 Avril 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 19 Avril 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+		        <div class="card">
+            <div class="line-date">Samedi 25 Avril 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 26 Avril 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 02 Mai 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 03 Mai 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+			<div class="line-infos">FIN CHAMPIONNAT GARÇONS</div>
+        </div>
+
+        <div class="card">
+            <div class="line-date">Samedi 09 Mai 2026</div>
+			<div class="line-period">Matin</div>
+			<div class="line-period">Après-midi</div>
+			<div class="line-vide"> </div>
+			<div class="line-date">Dimanche 10 Mai 2026</div>
+            <div class="line-period">Matin</div>
+            <div class="line-period">Après-midi</div>
+			<div class="line-infos">FIN CHAMPIONNAT FILLES</div>
+        </div>
     </div>
 
 </body>
