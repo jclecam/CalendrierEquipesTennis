@@ -6,13 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendrier Equipes TC Bourbriac</title>
     <style>
-        /* --- Reset et Base --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+		/* Header fixe en haut */
+		.site-header{
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			backdrop-filter: blur(6px);
+			background: rgba(240,242,245,0.95); /* même teinte que le fond pour cohérence */
+			border-bottom: none; /* supprime la ligne */
+			transform: translateZ(0); 
+		}
+		
+		.site-header__inner{
+			max-width: 600px; /* même largeur que .container dans ton fichier */
+			margin: 0 auto;
+			padding: 12px 16px;
+			display: flex;
+			flex-direction: column; 
+			justify-content: center; /* centre horizontalement le contenu */
+			align-items: center;
+		}
+		
+		.site-header h1{
+			font-size: 1.8rem;
+			font-weight: 700;
+            color: #222;
+			text-align: center; /* sécurité si le contenu passe sur plusieurs lignes */
+			width: 100%;
+			line-height: 1;
+		}
 
+		.site-header__subtitle{
+		  margin: 2px 0 0;
+		  font-size: 1.5rem;
+		  color: #555;
+		  font-weight: 500;
+		  text-align: center;
+		  opacity: 0.95;
+		  line-height: 0.8;
+		}
+		
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f0f2f5; /* Gris très clair pour le fond */
@@ -57,6 +90,14 @@
             margin-bottom: 8px;
         }
 
+        .line-period p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #700;
+            margin-bottom: 8px;
+			display: inline;
+        }
+		
         .line-teamh {
             font-size: 1rem;
             color: #007bff; /* Bleu pour l'équipe */
@@ -77,6 +118,23 @@
             font-weight: 500;
         }
 		
+		.line-teamf p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #700;
+            margin-bottom: 8px;
+			display: inline;
+        }
+		
+		.line-teamx {
+            font-size: 1rem;
+            color: #222222;
+            background-color: #CCCCCC; /* Fond rose très pâle */
+            padding: 6px 12px;
+            border-radius: 20px; /* Forme de pilule */
+            align-self: flex-start; /* Ne prend que la largeur nécessaire */
+            font-weight: 500;
+        }
         .line-court {
             font-size: 1rem;
             color: #0EB525;
@@ -102,6 +160,13 @@
     </style>
 </head>
 <body>
+	<header class="site-header" role="banner">
+	  <div class="site-header__inner">
+		<h1>Calendrier Equipes TC Bourbriac</h1>
+		<p class="site-header__subtitle">Saison 2025-2026 : Matchs à domicile</p>
+	  </div>
+	</header>
+
 
     <div class="container">
         
@@ -125,8 +190,13 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 21 Déc 2025</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
+			<div class="line-teamf">Equipe filles 13/15 ans&nbsp;&nbsp;<p>à replanifier</p></div>
+            <div class="line-period">Matin: 9h</div>
+			<div class="line-teamh">Equipe 1 Hommes</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+            <div class="line-period">Après-midi: 14h</div>
+			<div class="line-teamh">Equipe 3 Hommes</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
   
         <div class="card">
@@ -156,7 +226,11 @@
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 11 Jan 2026</div>
             <div class="line-period">Matin</div>
+			<div class="line-teamx">Equipe 1 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
             <div class="line-period">Après-midi</div>
+			<div class="line-teamx">Equipe 3 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
 
         <div class="card">
@@ -165,8 +239,10 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 18 Jan 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
+            <div class="line-period">Matin ou Après-midi <p>(A préciser)</p></div>
+			<div class="line-teamh">Equipe garçons 17/18 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+            <div class="line-period"></div>
         </div>
 		
 		<div class="card">
@@ -176,17 +252,19 @@
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 25 Jan 2026</div>
             <div class="line-period">Matin</div>
+			<div class="line-teamx">Equipe 1 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
             <div class="line-period">Après-midi</div>
+			<div class="line-teamx">Equipe 3 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
-		
-		        <div class="card">
+		    <div class="card">
             <div class="line-date">Samedi 31 Jan 2026</div>
 			<div class="line-period">Matin</div>
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 01 Fev 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
+            <div class="line-infos">Merci de ne pas planifier de match (Loto du club)</div>
         </div>
 
         <div class="card">
@@ -195,8 +273,13 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 08 Fev 2026</div>
+			<div class="line-teamf">Equipe filles 13/15 ans&nbsp;&nbsp; <p>à replanifier si matchs Hommes</p></div>
             <div class="line-period">Matin</div>
+			<div class="line-teamx">Equipe 1 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
             <div class="line-period">Après-midi</div>
+			<div class="line-teamx">Equipe 3 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
 
         <div class="card">
@@ -205,8 +288,9 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 15 Fev 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
+            <div class="line-period">Matin ou Après-midi <p>(A préciser)</p></div>
+			<div class="line-teamh">Equipe garçons 13/14 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
 		
 		<div class="card">
@@ -214,7 +298,7 @@
 			<div class="line-period">Matin</div>
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
-			<div class="line-date">Dimanche 22 Jan 2026</div>
+			<div class="line-date">Dimanche 22 Fev 2026</div>
             <div class="line-period">Matin</div>
             <div class="line-period">Après-midi</div>
         </div>
@@ -245,8 +329,13 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 15 Mars 2026</div>
+            <div class="line-teamf">Equipe filles 13/15 ans&nbsp;&nbsp; <p>à replanifier si matchs Hommes</p></div>
             <div class="line-period">Matin</div>
+			<div class="line-teamx">Equipe 1 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
             <div class="line-period">Après-midi</div>
+			<div class="line-teamx">Equipe 3 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
 		
 		<div class="card">
@@ -258,15 +347,19 @@
             <div class="line-period">Matin</div>
             <div class="line-period">Après-midi</div>
         </div>
-		        <div class="card">
+		    <div class="card">
             <div class="line-date">Samedi 28 Mars 2026</div>
 			<div class="line-period">Matin</div>
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 29 Mars 2026</div>
             <div class="line-period">Matin</div>
+			<div class="line-teamx">Equipe 1 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
             <div class="line-period">Après-midi</div>
-			<div class="line-infos">FIN CHAMPIONNAT HOMMES</div>
+			<div class="line-teamx">Equipe 3 Hommes (à confirmer début janvier)</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+			<div class="line-infos">FIN PHASES POULES HOMMES</div>
         </div>
 
         <div class="card">
@@ -275,8 +368,12 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 05 Avril 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
+            <div class="line-period">Matin ou Après-midi <p>(A voir entre capitaines)</p></div>
+            <div class="line-teamh">Equipe garçons 13/14 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+			<div class="line-teamh">Equipe garçons 17/18 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+			<div class="line-infos">FIN PHASES POULES GARÇONS 17/18 ans</div>
         </div>
 
         <div class="card">
@@ -285,8 +382,9 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 12 Avril 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
+            <div class="line-period">Matin ou Après-midi <p>(A préciser)</p></div>
+			<div class="line-teamh">Equipe garçons 13/14 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
 		
 		<div class="card">
@@ -314,9 +412,9 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 03 Mai 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
-			<div class="line-infos">FIN CHAMPIONNAT GARÇONS</div>
+            <div class="line-period">Matin ou Après-midi <p>(A préciser)</p></div>
+			<div class="line-teamf">Equipe filles 13/14 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
         </div>
 
         <div class="card">
@@ -325,9 +423,11 @@
 			<div class="line-period">Après-midi</div>
 			<div class="line-vide"> </div>
 			<div class="line-date">Dimanche 10 Mai 2026</div>
-            <div class="line-period">Matin</div>
-            <div class="line-period">Après-midi</div>
-			<div class="line-infos">FIN CHAMPIONNAT FILLES</div>
+            <div class="line-period">Matin ou Après-midi <p>(A préciser)</p></div>
+            <div class="line-teamh">Equipe garçons 13/14 ans</div>
+			<div class="line-court">Court N°1 et Gymnase</div>
+			<div class="line-infos">FIN PHASES POULES FILLES 13/14 ans</div>
+			<div class="line-infos">FIN PHASES POULES GARÇONS 13/14 ans</div>
         </div>
     </div>
 
