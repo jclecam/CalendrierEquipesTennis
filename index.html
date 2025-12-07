@@ -8,7 +8,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f0f2f5; /* Gris très clair pour le fond */
-            padding: 16px; /* Marge autour de l'écran */
+            padding: 8px; /* Marge autour de l'écran */
             color: #333;
         }
 		
@@ -23,7 +23,7 @@
 		}
 		
 		.site-header__inner{
-			max-width: 800px; /* même largeur que .container dans ton fichier */
+			max-width: 1080px; /* même largeur que .container dans ton fichier */
 			margin: 0 auto;
 			padding: 12px 16px;
 			display: flex;
@@ -33,17 +33,18 @@
 		}
 		
 		.site-header h1{
-			font-size: 1.8rem;
+			font-size: 1.3rem;
 			font-weight: 700;
             color: #222;
 			text-align: center; /* sécurité si le contenu passe sur plusieurs lignes */
+			margin: 0;
 			width: 100%;
 			line-height: 1;
 		}
 
 		.site-header__subtitle{
-		  margin: 2px 0 0;
-		  font-size: 1.5rem;
+		  margin: 5px 0 0;
+		  font-size: 1.1rem;
 		  color: #555;
 		  font-weight: 500;
 		  text-align: center;
@@ -52,7 +53,7 @@
 		}
         /* --- Conteneur des blocs --- */
         .container {
-            max-width: 800px; /* Limite la largeur sur PC, prend 100% sur mobile */
+            max-width: 1080px; /* Limite la largeur sur PC, prend 100% sur mobile */
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -63,6 +64,7 @@
         .card {
             background-color: #ffffff;
             border-radius: 16px; /* Arrondi des angles */
+			margin: 5px;
             padding: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Légère ombre pour le relief */
             display: flex;
@@ -81,14 +83,14 @@
         }
 
         .line-period {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #222;
             margin-bottom: 8px;
         }
 
         .line-period p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #700;
             margin-bottom: 8px;
@@ -154,6 +156,14 @@
             align-self: flex-start; /* Ne prend que la largeur nécessaire */
             font-weight: 500;            
         }
+		
+		@media (max-width: 360px) {
+		  body { padding: 6px; }
+		  .card { padding: 8px; border-radius: 12px; }
+		  .site-header__inner { padding: 6px; }
+		  
+		}
+
     </style>
 </head>
 <body>
